@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/wrap_layout" >
+            <!-- 上圆角-->
+            <LinearLayout style="@style/top_layout" android:id="@+id/go_status_time">
+                <TextView style="@style/usertext" android:text="状态栏时间项" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_status_hide">
+                <TextView style="@style/usertext" android:text="状态栏图标项" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_status_super">
+                <TextView style="@style/usertext" android:text="状态栏高级项" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_layout">-->
+                <!--<TextView-->
+                    <!--style="@style/usertext" android:text="状态栏布局" />-->
+                <!--<ImageView style="@style/img_arrow"/>-->
+            <!--</LinearLayout>-->
+            <!--<View style="@style/bg_line"/>-->
+
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_pull">
+                <TextView style="@style/usertext" android:text="下拉显示设置" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_quick_setting">
+                <TextView style="@style/usertext" android:text="快捷列数设置" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_home">
+                <TextView style="@style/usertext" android:text="桌面布局" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_donghua">
+                <TextView style="@style/usertext" android:text="过渡动画(重启生效)" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>-->
+
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_dpi">
+                <TextView style="@style/usertext" android:text="DPI设置" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_thermal">
+                <TextView style="@style/usertext" android:text="温控优化(重启生效)" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>-->
+
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_ifw">
+                <TextView style="@style/usertext" android:text="IFW设置" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/go_wifi">
+                <TextView style="@style/usertext" android:text="WIFI信息" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <!--<View style="@style/bg_line"/>-->
+
+            <!-- 下圆角-->
+            <!--<LinearLayout style="@style/bottom_layout" android:id="@+id/go_mipush">
+                <TextView style="@style/usertext" android:text="安装三方MIPush" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>-->
+        </LinearLayout>
+
+        <!-- 全圆角-->
+        <LinearLayout style="@style/wrap_layout">
+            <LinearLayout style="@style/single_layout" android:id="@+id/go_paopao">
+                <TextView style="@style/usertext" android:text="作者：PaoPao"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/go_rec"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@android:color/holo_blue_light"
+                android:text="重启到REC"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/go_fas"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@android:color/holo_blue_light"
+                android:text="重启到Fastboot"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

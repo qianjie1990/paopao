@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonghuaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="安卓原生"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/dh_yuansheng"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_weight="4"
+                android:background="@android:color/holo_orange_light"
+                android:text="应用"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="高斯模糊"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/dh_blur"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_weight="4"
+                android:background="@android:color/holo_orange_light"
+                android:text="应用"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright" />
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="DX8动画"-->
+                <!--android:textSize="20sp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/dh_dx8"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:layout_weight="4"-->
+                <!--android:background="@android:color/holo_orange_light"-->
+                <!--android:text="应用"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="18sp" />-->
+
+        <!--</LinearLayout>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@android:color/holo_blue_bright" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="华为EMUI"-->
+                <!--android:textSize="20sp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/dh_emui"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:layout_weight="4"-->
+                <!--android:background="@android:color/holo_orange_light"-->
+                <!--android:text="应用"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="18sp" />-->
+
+        <!--</LinearLayout>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@android:color/holo_blue_bright" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="苹果IOS"-->
+                <!--android:textSize="20sp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/dh_ios"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:layout_weight="4"-->
+                <!--android:background="@android:color/holo_orange_light"-->
+                <!--android:text="应用"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="18sp" />-->
+
+        <!--</LinearLayout>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@android:color/holo_blue_bright" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="九尾特效"-->
+                <!--android:textSize="20sp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/dh_jiuwei"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:layout_weight="4"-->
+                <!--android:background="@android:color/holo_orange_light"-->
+                <!--android:text="应用"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="18sp" />-->
+
+        <!--</LinearLayout>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@android:color/holo_blue_bright" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="老罗锤子"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/dh_chuizi"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_weight="4"
+                android:background="@android:color/holo_orange_light"
+                android:text="应用"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MIUI默认"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/dh_miui"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_weight="4"
+                android:background="@android:color/holo_orange_light"
+                android:text="应用"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

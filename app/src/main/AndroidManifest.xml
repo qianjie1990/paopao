@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.paopaox">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:process="com.android.settings"
+        android:roundIcon="@mipmap/ic_launcher_new"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.administrator.paopaox"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name="com.example.administrator.paopaox.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.administrator.paopaox.LayoutActivity" />
+        <activity android:name="com.example.administrator.paopaox.DPIActivity" />
+        <activity android:name="com.example.administrator.paopaox.DonghuaActivity" />
+        <activity android:name="com.example.administrator.paopaox.HomeActivity" />
+        <activity android:name="com.example.administrator.paopaox.ThermalActivity" />
+        <activity android:name="com.example.administrator.paopaox.IFWActivity" />
+        <activity android:name="com.example.administrator.paopaox.QuickSettingActivity" />
+        <activity android:name="com.example.administrator.paopaox.StatusTimeActivity" />
+        <activity android:name="com.example.administrator.paopaox.StatusSuperActivity" />
+        <activity android:name="com.example.administrator.paopaox.PullActivity" />
+        <activity android:name="com.example.administrator.paopaox.StatusHideActivity" />
+    </application>
+
+</manifest>
