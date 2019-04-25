@@ -80,19 +80,19 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
             }
         });
 
-//        LinearLayout go_layout = findViewById(R.id.go_layout);
-//        go_layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    Intent intent = new Intent();
-//                    intent.setClass(MainActivity.this, LayoutActivity.class);
-//                    MainActivity.this.startActivity(intent);
-//                } catch (Exception e) {
-//
-//                }
-//            }
-//        });
+        LinearLayout go_layout = findViewById(R.id.go_layout);
+        go_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this, LayoutActivity.class);
+                    MainActivity.this.startActivity(intent);
+                } catch (Exception e) {
+
+                }
+            }
+        });
 
         LinearLayout go_pull = findViewById(R.id.go_pull);
         go_pull.setOnClickListener(new View.OnClickListener() {
@@ -150,19 +150,19 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 //            }
 //        });
 
-        LinearLayout go_home = findViewById(R.id.go_home);
-        go_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent();
-                    intent.setClass(MainActivity.this, HomeActivity.class);
-                    MainActivity.this.startActivity(intent);
-                } catch (Exception e) {
-
-                }
-            }
-        });
+//        LinearLayout go_home = findViewById(R.id.go_home);
+//        go_home.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try {
+//                    Intent intent = new Intent();
+//                    intent.setClass(MainActivity.this, HomeActivity.class);
+//                    MainActivity.this.startActivity(intent);
+//                } catch (Exception e) {
+//
+//                }
+//            }
+//        });
 
 //        LinearLayout go_thermal = findViewById(R.id.go_thermal);
 //        go_thermal.setOnClickListener(new View.OnClickListener() {

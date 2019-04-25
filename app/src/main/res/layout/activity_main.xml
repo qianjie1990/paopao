@@ -34,12 +34,12 @@
             </LinearLayout>
             <View style="@style/bg_line"/>
 
-            <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_layout">-->
-                <!--<TextView-->
-                    <!--style="@style/usertext" android:text="状态栏布局" />-->
-                <!--<ImageView style="@style/img_arrow"/>-->
-            <!--</LinearLayout>-->
-            <!--<View style="@style/bg_line"/>-->
+            <LinearLayout style="@style/mid_layout" android:id="@+id/go_layout">
+                <TextView
+                    style="@style/usertext" android:text="状态栏布局" />
+                <ImageView style="@style/img_arrow"/>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
 
             <LinearLayout style="@style/mid_layout" android:id="@+id/go_pull">
                 <TextView style="@style/usertext" android:text="下拉显示设置" />
@@ -53,11 +53,11 @@
             </LinearLayout>
             <View style="@style/bg_line"/>
 
-            <LinearLayout style="@style/mid_layout" android:id="@+id/go_home">
+            <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_home">
                 <TextView style="@style/usertext" android:text="桌面布局" />
                 <ImageView style="@style/img_arrow"/>
             </LinearLayout>
-            <View style="@style/bg_line"/>
+            <View style="@style/bg_line"/>-->
 
             <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_donghua">
                 <TextView style="@style/usertext" android:text="过渡动画(重启生效)" />
