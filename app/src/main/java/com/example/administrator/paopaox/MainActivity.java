@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import java.io.BufferedReader;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         setContentView(R.layout.activity_main);
 
         check();
-        checkPermission();
+//        checkPermission();
         new MyAsyncTask().execute(getPackageCodePath());
 //        upgradeRootPermission(getPackageCodePath());
 
@@ -178,35 +180,35 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 //            }
 //        });
 
-        LinearLayout go_ifw = findViewById(R.id.go_ifw);
-        go_ifw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent();
-                    intent.setClass(MainActivity.this, IFWActivity.class);
-                    MainActivity.this.startActivity(intent);
-                } catch (Exception e) {
+//        LinearLayout go_ifw = findViewById(R.id.go_ifw);
+//        go_ifw.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try {
+//                    Intent intent = new Intent();
+//                    intent.setClass(MainActivity.this, IFWActivity.class);
+//                    MainActivity.this.startActivity(intent);
+//                } catch (Exception e) {
+//
+//                }
+//            }
+//        });
 
-                }
-            }
-        });
-
-        LinearLayout go_wifi = findViewById(R.id.go_wifi);
-        go_wifi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("WIFI信息");
-                    builder.setMessage(getWifi());
-
-                    builder.create().show();
-                } catch (Exception e) {
-
-                }
-            }
-        });
+//        LinearLayout go_wifi = findViewById(R.id.go_wifi);
+//        go_wifi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try {
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//                    builder.setTitle("WIFI信息");
+//                    builder.setMessage(getWifi());
+//
+//                    builder.create().show();
+//                } catch (Exception e) {
+//
+//                }
+//            }
+//        });
 
 //        LinearLayout go_mipush = findViewById(R.id.go_mipush);
 //        go_mipush.setOnClickListener(new View.OnClickListener() {
@@ -265,65 +267,65 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
             }
         });
 
-//        Button go_rec = findViewById(R.id.go_rec);
-//        go_rec.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-//                    builder.setTitle("提示");
-//                    builder.setMessage("确认重启吗");
-//                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            CommandExecution.execCommand("sh "+prefix+"/bin/PP_REC.sh", true);
-//                        }
-//                    });
-//                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.dismiss();
-//                        }
-//                    });
-//                    builder.setCancelable(false);
-//                    builder.create().show();
-//
-//                    Toast.makeText(getApplicationContext(),"成功",Toast.LENGTH_SHORT).show();
-//                } catch (Exception e) {
-//                    Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//
-//        Button go_fas = findViewById(R.id.go_fas);
-//        go_fas.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-//                    builder.setTitle("提示");
-//                    builder.setMessage("确认重启吗");
-//                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            CommandExecution.execCommand("sh "+prefix+"/bin/PP_FAS.sh", true);
-//                        }
-//                    });
-//                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.dismiss();
-//                        }
-//                    });
-//                    builder.setCancelable(false);
-//                    builder.create().show();
-//
-//                    Toast.makeText(getApplicationContext(),"成功",Toast.LENGTH_SHORT).show();
-//                } catch (Exception e) {
-//                    Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
+        LinearLayout go_rec = findViewById(R.id.go_rec);
+        go_rec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("提示");
+                    builder.setMessage("确认重启吗");
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            CommandExecution.execCommand("reboot recovery", true);
+                        }
+                    });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.setCancelable(false);
+                    builder.create().show();
+
+                    Toast.makeText(getApplicationContext(),"成功",Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        LinearLayout go_fas = findViewById(R.id.go_fas);
+        go_fas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("提示");
+                    builder.setMessage("确认重启吗");
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            CommandExecution.execCommand("reboot bootloader", true);
+                        }
+                    });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.setCancelable(false);
+                    builder.create().show();
+
+                    Toast.makeText(getApplicationContext(),"成功",Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 //    @Override
@@ -380,7 +382,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 
     private void checkPermission() {
         //检查权限（NEED_PERMISSION）是否被授权 PackageManager.PERMISSION_GRANTED表示同意授权
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             //用户已经拒绝过一次，再次弹出权限申请对话框需要给用户一个解释
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
@@ -411,13 +413,17 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
                             String line;
                             //分行读取
                             while ((line = buffreader.readLine()) != null) {
-                                if(line.trim().contains("name=\"SSID\"")){
+                                if(line.trim().contains("name=\"SSID\"") && line.trim().contains("&quot;")){
                                     String[] list = line.split("&quot;");
                                     str += "SSID："+new String(list[1])+"\n";
                                 }
                                 if(line.trim().contains("name=\"PreSharedKey\"")){
-                                    String[] list = line.split("&quot;");
-                                    str += "密码："+list[1]+"\n\n";
+                                    if(line.trim().contains("&quot;")){
+                                        String[] list = line.split("&quot;");
+                                        str += "密码："+list[1]+"\n\n";
+                                    }else{
+                                        str += "密码：免密\n\n";
+                                    }
                                 }
                             }
                             instream.close();//关闭输入流
@@ -437,7 +443,14 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         return str;
     }
 
-
+    class MyAsyncTask extends AsyncTask<String,Integer,Boolean>{
+        @Override
+        protected Boolean doInBackground(String... params){
+            String cmd="chmod 777 " + params[0];
+            CommandExecution.execCommand(cmd, true);
+            return true;
+        }
+    }
 
     public static void dualSignal(SignalClusterView view){
         Context context = view.getContext();
@@ -454,12 +467,85 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         view.mNotchEarDualEnable = a;
     }
 
-    class MyAsyncTask extends AsyncTask<String,Integer,Boolean>{
-        @Override
-        protected Boolean doInBackground(String... params){
-            String cmd="chmod 777 " + params[0];
-            CommandExecution.execCommand(cmd, true);
-            return true;
+    public static void layoutMR(View view){
+        Context context = view.getContext();
+        ContentResolver resolver = context.getContentResolver();
+        String str = "paopao_time_layout";
+        int value = 0;
+        value = Settings.System.getInt(resolver,str,value);
+        if(value==0){
+            view.setVisibility(View.VISIBLE);
+            view.setVisibility(View.GONE);
+        }
+    }
+
+    public static void layoutIOS(View view){
+        Context context = view.getContext();
+        ContentResolver resolver = context.getContentResolver();
+        String str = "paopao_time_layout";
+        int value = 0;
+        value = Settings.System.getInt(resolver,str,value);
+        if(value==1){
+            view.setVisibility(View.GONE);
+            view.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public static void layoutPP(View line){
+        LinearLayout view = (LinearLayout) line;
+        Context context = view.getContext();
+        ContentResolver resolver = context.getContentResolver();
+        String str = "paopao_time_layout";
+        int value = 0;
+        value = Settings.System.getInt(resolver,str,value);
+        View mr = view.findViewWithTag("statusbar_mr");
+        View ios = view.findViewWithTag("statusbar_ios");
+        View db = view.findViewWithTag("statusbar_db");
+        View dbios = view.findViewWithTag("statusbar_dbios");
+        if(value==0){
+            mr.setVisibility(View.VISIBLE);
+            ios.setVisibility(View.GONE);
+            db.setVisibility(View.GONE);
+            dbios.setVisibility(View.GONE);
+            view.removeView(ios);
+            view.removeView(db);
+            view.removeView(dbios);
+            view.addView(ios);
+            view.addView(db);
+            view.addView(dbios);
+        }else if(value==1){
+            mr.setVisibility(View.GONE);
+            ios.setVisibility(View.VISIBLE);
+            db.setVisibility(View.GONE);
+            dbios.setVisibility(View.GONE);
+            view.removeView(mr);
+            view.removeView(db);
+            view.removeView(dbios);
+            view.addView(mr);
+            view.addView(db);
+            view.addView(dbios);
+        }else if(value==2){
+            mr.setVisibility(View.GONE);
+            ios.setVisibility(View.GONE);
+            db.setVisibility(View.VISIBLE);
+            dbios.setVisibility(View.GONE);
+            view.removeView(mr);
+            view.removeView(ios);
+            view.removeView(dbios);
+            view.addView(mr);
+            view.addView(ios);
+            view.addView(dbios);
+        }else if(value==3){
+            mr.setVisibility(View.GONE);
+            ios.setVisibility(View.GONE);
+            db.setVisibility(View.GONE);
+            dbios.setVisibility(View.VISIBLE);
+            view.removeView(mr);
+            view.removeView(ios);
+            view.removeView(db);
+            view.addView(mr);
+            view.addView(ios);
+            view.addView(db);
         }
     }
 }

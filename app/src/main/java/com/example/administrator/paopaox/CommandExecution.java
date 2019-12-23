@@ -110,7 +110,8 @@ public class CommandExecution {
 
     public static void rebootStatusBar(){
         CommandExecution.execCommand("sleep 1",true);
-        CommandExecution.execCommand("busybox killall com.android.systemui",true);
+        CommandExecution.execCommand("pkill -TERM -f com.android.systemui",true);
+//        CommandExecution.execCommand("busybox killall com.android.systemui",true);
 //        CommandExecution.execCommand("ps |grep zygote|busybox awk '{print $2}'|busybox xargs kill -9",true);
     }
 

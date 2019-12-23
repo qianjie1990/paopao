@@ -36,7 +36,7 @@
 
             <LinearLayout style="@style/mid_layout" android:id="@+id/go_layout">
                 <TextView
-                    style="@style/usertext" android:text="状态栏布局" />
+                    style="@style/usertext" android:text="状态栏布局项" />
                 <ImageView style="@style/img_arrow"/>
             </LinearLayout>
             <View style="@style/bg_line"/>
@@ -65,11 +65,11 @@
             </LinearLayout>
             <View style="@style/bg_line"/>-->
 
-            <LinearLayout style="@style/mid_layout" android:id="@+id/go_dpi">
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/go_dpi">
                 <TextView style="@style/usertext" android:text="DPI设置" />
                 <ImageView style="@style/img_arrow"/>
             </LinearLayout>
-            <View style="@style/bg_line"/>
+            <!--<View style="@style/bg_line"/>-->
 
             <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_thermal">
                 <TextView style="@style/usertext" android:text="温控优化(重启生效)" />
@@ -77,16 +77,16 @@
             </LinearLayout>
             <View style="@style/bg_line"/>-->
 
-            <LinearLayout style="@style/mid_layout" android:id="@+id/go_ifw">
+            <!--<LinearLayout style="@style/mid_layout" android:id="@+id/go_ifw">
                 <TextView style="@style/usertext" android:text="IFW设置" />
                 <ImageView style="@style/img_arrow"/>
             </LinearLayout>
-            <View style="@style/bg_line"/>
+            <View style="@style/bg_line"/>-->
 
-            <LinearLayout style="@style/bottom_layout" android:id="@+id/go_wifi">
+            <!--<LinearLayout style="@style/bottom_layout" android:id="@+id/go_wifi">
                 <TextView style="@style/usertext" android:text="WIFI信息" />
                 <ImageView style="@style/img_arrow"/>
-            </LinearLayout>
+            </LinearLayout>-->
             <!--<View style="@style/bg_line"/>-->
 
             <!-- 下圆角-->
@@ -96,7 +96,17 @@
             </LinearLayout>-->
         </LinearLayout>
 
-        <!-- 全圆角-->
+        <LinearLayout style="@style/wrap_layout">
+            <LinearLayout style="@style/top_layout" android:id="@+id/go_rec">
+                <TextView style="@style/usertext" android:text="重启到REC" />
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+
+            <LinearLayout style="@style/bottom_layout" android:id="@+id/go_fas">
+                <TextView style="@style/usertext" android:text="重启到Fastboot" />
+            </LinearLayout>
+        </LinearLayout>
+
         <LinearLayout style="@style/wrap_layout">
             <LinearLayout style="@style/single_layout" android:id="@+id/go_paopao">
                 <TextView style="@style/usertext" android:text="作者：PaoPao"/>

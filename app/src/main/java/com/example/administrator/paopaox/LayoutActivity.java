@@ -27,6 +27,12 @@ public class LayoutActivity extends AppCompatActivity {
             case 1:
                 time_layout_checked = findViewById(R.id.time_layout_1);
                 break;
+            case 2:
+                time_layout_checked = findViewById(R.id.time_layout_2);
+                break;
+            case 3:
+                time_layout_checked = findViewById(R.id.time_layout_3);
+                break;
         }
         time_layout_checked.setChecked(true);
 
@@ -50,20 +56,28 @@ public class LayoutActivity extends AppCompatActivity {
         Context context = getApplicationContext();
 
         Integer time_layout_value = 0;
-        String command = "sh /system/bin/PP_SystemUI_MR.sh";
+//        String command = "sh /system/bin/PP_SystemUI_MR.sh";
         RadioGroup time_layout = findViewById(R.id.time_layout);
         int id = time_layout.getCheckedRadioButtonId();
         switch (id){
             case R.id.time_layout_0:
                 time_layout_value = 0;
-                command = "sh /system/bin/PP_SystemUI_MR.sh";
+//                command = "sh /system/bin/PP_SystemUI_MR.sh";
                 break;
             case R.id.time_layout_1:
                 time_layout_value = 1;
-                command = "sh /system/bin/PP_SystemUI_IOS.sh";
+//                command = "sh /system/bin/PP_SystemUI_IOS.sh";
+                break;
+            case R.id.time_layout_2:
+                time_layout_value = 2;
+//                command = "sh /system/bin/PP_SystemUI_IOS.sh";
+                break;
+            case R.id.time_layout_3:
+                time_layout_value = 3;
+//                command = "sh /system/bin/PP_SystemUI_IOS.sh";
                 break;
         }
         Common.setValue(context,"paopao_time_layout",time_layout_value);
-        CommandExecution.execCommand(command, true);
+//        CommandExecution.execCommand(command, true);
     }
 }

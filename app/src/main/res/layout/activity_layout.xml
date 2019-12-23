@@ -10,6 +10,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="注：异形屏不支持！"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -36,6 +65,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="时间居中" />
+                <RadioButton
+                    android:id="@+id/time_layout_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="双排布局" />
+                <RadioButton
+                    android:id="@+id/time_layout_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="双排居中" />
             </RadioGroup>
         </LinearLayout>
         <View
